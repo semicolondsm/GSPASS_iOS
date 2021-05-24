@@ -6,5 +6,6 @@ target 'GSPASS' do
   use_frameworks!
 
   # Pods for GSPASS
+  pod 'SwiftLint'
 
 end
