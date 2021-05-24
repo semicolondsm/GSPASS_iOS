@@ -13,6 +13,7 @@
 		928D24CA2656680600A9E343 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 928D24C82656680600A9E343 /* Main.storyboard */; };
 		928D24CC2656680700A9E343 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 928D24CB2656680700A9E343 /* Assets.xcassets */; };
 		928D24CF2656680700A9E343 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 928D24CD2656680700A9E343 /* LaunchScreen.storyboard */; };
+		92951AA9265B26B600F795E1 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 92951AA8265B26B600F795E1 /* .swiftlint.yml */; };
 		E32FAFB7B0EF3766A9560CE6 /* Pods_GSPASS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3187090623D4AA3CE9FAA83 /* Pods_GSPASS.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		928D24CB2656680700A9E343 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		928D24CE2656680700A9E343 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		928D24D02656680700A9E343 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92951AA8265B26B600F795E1 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		B3187090623D4AA3CE9FAA83 /* Pods_GSPASS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GSPASS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -48,7 +50,6 @@
 				63538831E6AC337B7650D414 /* Pods-GSPASS.debug.xcconfig */,
 				15E8E2E1A7B781663C67ADF3 /* Pods-GSPASS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -63,6 +64,7 @@
 		928D24B62656680600A9E343 = {
 			isa = PBXGroup;
 			children = (
+				92951AA8265B26B600F795E1 /* .swiftlint.yml */,
 				928D24C12656680600A9E343 /* GSPASS */,
 				928D24C02656680600A9E343 /* Products */,
 				03CD58B748FB31DA2F39F733 /* Pods */,
@@ -103,6 +105,7 @@
 				928D24BB2656680600A9E343 /* Sources */,
 				928D24BC2656680600A9E343 /* Frameworks */,
 				928D24BD2656680600A9E343 /* Resources */,
+				92951AA6265B25E100F795E1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -150,6 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92951AA9265B26B600F795E1 /* .swiftlint.yml in Resources */,
 				928D24CF2656680700A9E343 /* LaunchScreen.storyboard in Resources */,
 				928D24CC2656680700A9E343 /* Assets.xcassets in Resources */,
 				928D24CA2656680600A9E343 /* Main.storyboard in Resources */,
@@ -180,6 +184,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		92951AA6265B25E100F795E1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

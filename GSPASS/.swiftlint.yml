@@ -1,0 +1,4 @@
+excluded:
+  - Pods
+  - GSPASS/AppDelegate.swift
+  - GSPASS/SceneDelegate.swift
