@@ -7,5 +7,6 @@ target 'GSPASS' do
 
   # Pods for GSPASS
   pod 'SwiftLint'
+  pod 'RxSwift', '6.2.0'
 
 end
