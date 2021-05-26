@@ -10,21 +10,17 @@ import Alamofire
 import KeychainSwift
 
 enum GSPASSAPI {
-    
     // Authorization
     case register(_ registerModel: RegisterModel)
-    case login(_ id: String, _ password: String)
+    case login(_ userId: String, _ password: String)
     case password
     case overlap
-    
 }
 
 extension GSPASSAPI {
     
-    public var url: String {
-        
+    public var uri: String {
         let baseUrl = ""
-        
         return baseUrl + path
     }
     
@@ -47,8 +43,8 @@ extension GSPASSAPI {
                     "name": registerModel.name!,
                     "user_id": registerModel.user_id!,
                     "registerModel.password": registerModel.password!]
-        case .login(let id, let password):
-            return ["user_id": id,
+        case .login(let userId, let password):
+            return ["user_id": userId,
                     "password": password]
         default:
             return nil
@@ -73,7 +69,6 @@ extension GSPASSAPI {
             return nil
         }
     }
-    
     
     private var path: String {
         switch self {
