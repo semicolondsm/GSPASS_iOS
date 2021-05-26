@@ -11,6 +11,12 @@ import KeychainSwift
 
 enum GSPASSAPI {
     
+    // Authorization
+    case register(_ registerModel: RegisterModel)
+    case login(_ id: String, _ password: String)
+    case password
+    case overlap
+    
 }
 
 extension GSPASSAPI {
@@ -24,11 +30,28 @@ extension GSPASSAPI {
     
     public var method: HTTPMethod {
         switch self {
+        case .register,
+             .login,
+             .password:
+            return .post
+        case .overlap:
+            return .get
         }
     }
     
     public var parameters: Parameters? {
         switch self {
+        case .register(let registerModel):
+            return ["random_code": registerModel.random_code!,
+                    "gcn": registerModel.gcn!,
+                    "name": registerModel.name!,
+                    "user_id": registerModel.user_id!,
+                    "registerModel.password": registerModel.password!]
+        case .login(let id, let password):
+            return ["user_id": id,
+                    "password": password]
+        default:
+            return nil
         }
     }
     
@@ -41,14 +64,27 @@ extension GSPASSAPI {
         }
     }
     
-    public var header: HTTPHeader {
+    public var header: HTTPHeaders? {
         switch self {
+        case .register,
+             .login,
+             .password,
+             .overlap:
+            return nil
         }
     }
     
     
     private var path: String {
         switch self {
+        case .register:
+            return "/register"
+        case .login:
+            return "/login"
+        case .password:
+            return "/password"
+        case .overlap:
+            return "/overlap"
         }
     }
     
