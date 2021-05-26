@@ -18,6 +18,7 @@
 		92951ADE265D10D500F795E1 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92951ADD265D10D500F795E1 /* MainModel.swift */; };
 		92B4EB8C265D41CE001DF9C4 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B4EB8B265D41CE001DF9C4 /* HTTPClient.swift */; };
 		92B4EB90265D41FA001DF9C4 /* GSPASSAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B4EB8F265D41FA001DF9C4 /* GSPASSAPI.swift */; };
+		92B4EBA1265E1EEC001DF9C4 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B4EBA0265E1EEC001DF9C4 /* RegisterModel.swift */; };
 		E32FAFB7B0EF3766A9560CE6 /* Pods_GSPASS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3187090623D4AA3CE9FAA83 /* Pods_GSPASS.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		92951ADD265D10D500F795E1 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		92B4EB8B265D41CE001DF9C4 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		92B4EB8F265D41FA001DF9C4 /* GSPASSAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSPASSAPI.swift; sourceTree = "<group>"; };
+		92B4EBA0265E1EEC001DF9C4 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		B3187090623D4AA3CE9FAA83 /* Pods_GSPASS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GSPASS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 		92951AB1265D0DDB00F795E1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				92B4EB9F265E1EC2001DF9C4 /* AuthModel */,
 				92B4EB8A265D419E001DF9C4 /* Network */,
 				92951ADD265D10D500F795E1 /* MainModel.swift */,
 			);
@@ -152,6 +155,14 @@
 				92B4EB8F265D41FA001DF9C4 /* GSPASSAPI.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		92B4EB9F265E1EC2001DF9C4 /* AuthModel */ = {
+			isa = PBXGroup;
+			children = (
+				92B4EBA0265E1EEC001DF9C4 /* RegisterModel.swift */,
+			);
+			path = AuthModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +302,7 @@
 				92951AD8265D10B300F795E1 /* MainViewController.swift in Sources */,
 				928D24C32656680600A9E343 /* AppDelegate.swift in Sources */,
 				928D24C52656680600A9E343 /* SceneDelegate.swift in Sources */,
+				92B4EBA1265E1EEC001DF9C4 /* RegisterModel.swift in Sources */,
 				92951ADE265D10D500F795E1 /* MainModel.swift in Sources */,
 				92951ADB265D10BD00F795E1 /* MainViewModel.swift in Sources */,
 				92B4EB8C265D41CE001DF9C4 /* HTTPClient.swift in Sources */,
