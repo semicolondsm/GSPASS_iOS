@@ -14,4 +14,5 @@ enum StatusCode: Error {
     case forbidden           // 402; 권한 없음
     case notFound            // 404; 찾을 수 없는 경로
     case internalServerError // 500; 서버 에러
+    case unkown              // 알수 없는 에러
 }
