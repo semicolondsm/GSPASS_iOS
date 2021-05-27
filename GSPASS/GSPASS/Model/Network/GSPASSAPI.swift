@@ -20,7 +20,7 @@ enum GSPASSAPI {
 extension GSPASSAPI {
     
     public var uri: String {
-        let baseUrl = ""
+        let baseUrl = "http://13.125.161.204:8080"
         return baseUrl + path
     }
     
