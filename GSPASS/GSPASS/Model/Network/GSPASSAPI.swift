@@ -18,12 +18,12 @@ enum GSPASSAPI {
 }
 
 extension GSPASSAPI {
-    
+
     public var uri: String {
         let baseUrl = "http://13.125.161.204:8080"
         return baseUrl + path
     }
-    
+
     public var method: HTTPMethod {
         switch self {
         case .register,
@@ -34,7 +34,7 @@ extension GSPASSAPI {
             return .get
         }
     }
-    
+
     public var parameters: Parameters? {
         switch self {
         case .register(let registerModel):
@@ -50,7 +50,7 @@ extension GSPASSAPI {
             return nil
         }
     }
-    
+
     public var encoding: ParameterEncoding {
         switch self.method {
         case .get:
@@ -59,7 +59,7 @@ extension GSPASSAPI {
             return JSONEncoding.default
         }
     }
-    
+
     public var header: HTTPHeaders? {
         switch self {
         case .register,
@@ -69,7 +69,7 @@ extension GSPASSAPI {
             return nil
         }
     }
-    
+
     private var path: String {
         switch self {
         case .register:
@@ -82,17 +82,17 @@ extension GSPASSAPI {
             return "/overlap"
         }
     }
-    
+
     private var accessTocken: String {
         let keychain = KeychainSwift()
         return keychain.get("ACCESS-TOKEN") ?? ""
     }
-    
+
     private var refreshToken: String {
         let keychain = KeychainSwift()
         return keychain.get("REFRESH-TOKEN") ?? ""
     }
-    
+
     private func encodingQuery(query: String) -> String {
         return query.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed) ?? query
     }
