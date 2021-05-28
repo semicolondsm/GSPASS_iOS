@@ -93,7 +93,7 @@ extension GSPASSAPI {
         return keychain.get("REFRESH-TOKEN") ?? ""
     }
     
-    private func encodingQuery(query: String) -> String{
+    private func encodingQuery(query: String) -> String {
         return query.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed) ?? query
     }
 }

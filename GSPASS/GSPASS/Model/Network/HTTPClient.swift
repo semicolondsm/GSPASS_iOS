@@ -13,19 +13,19 @@ import RxAlamofire
 class HTTPClient {
     static let shared = HTTPClient()
     
-    func networking<T:Codable>(_ api: GSPASSAPI, _ networkModel: T.Type) -> Observable<T>{
+    func networking<T: Codable>(_ api: GSPASSAPI, _ networkModel: T.Type) -> Observable<T> {
         requestData(api.method, api.uri,
                     parameters: api.parameters,
                     encoding: api.encoding,
                     headers: api.header)
-            .flatMap{ response, data -> Observable<T> in
-                return Observable<T>.create{ observable in
+            .flatMap { response, data -> Observable<T> in
+                return Observable<T>.create { observable in
                     switch response.statusCode {
                     case 200:
                         do {
                             let processedData: T = try JSONDecoder().decode(T.self, from: data)
                             observable.on(.next(processedData))
-                        } catch(let error) {
+                        } catch let error {
                             observable.onError(error)
                         }
                     case 400: observable.onError(StatusCode.badRequest)
