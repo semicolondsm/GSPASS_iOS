@@ -12,7 +12,7 @@ import RxAlamofire
 
 class HTTPClient {
     static let shared = HTTPClient()
-    
+
     func networking<T: Codable>(_ api: GSPASSAPI, _ networkModel: T.Type) -> Observable<T> {
         requestData(api.method, api.uri,
                     parameters: api.parameters,
