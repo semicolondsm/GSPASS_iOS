@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		925706992662537B0058B3D8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925706982662537B0058B3D8 /* LoginViewController.swift */; };
 		9257069B266253920058B3D8 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9257069A266253920058B3D8 /* Auth.storyboard */; };
+		9257069E266254B50058B3D8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9257069D266254B40058B3D8 /* LoginViewModel.swift */; };
+		925706A02662550A0058B3D8 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9257069F2662550A0058B3D8 /* LoginModel.swift */; };
 		928D24C32656680600A9E343 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D24C22656680600A9E343 /* AppDelegate.swift */; };
 		928D24C52656680600A9E343 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D24C42656680600A9E343 /* SceneDelegate.swift */; };
 		928D24CA2656680600A9E343 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 928D24C82656680600A9E343 /* Main.storyboard */; };
@@ -30,6 +32,8 @@
 		63538831E6AC337B7650D414 /* Pods-GSPASS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSPASS.debug.xcconfig"; path = "Target Support Files/Pods-GSPASS/Pods-GSPASS.debug.xcconfig"; sourceTree = "<group>"; };
 		925706982662537B0058B3D8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9257069A266253920058B3D8 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		9257069D266254B40058B3D8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		9257069F2662550A0058B3D8 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		928D24BF2656680600A9E343 /* GSPASS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GSPASS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		928D24C22656680600A9E343 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		928D24C42656680600A9E343 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 		9257069C266253A50058B3D8 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				9257069D266254B40058B3D8 /* LoginViewModel.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 		92B4EB9F265E1EC2001DF9C4 /* AuthModel */ = {
 			isa = PBXGroup;
 			children = (
+				9257069F2662550A0058B3D8 /* LoginModel.swift */,
 				92B4EBA0265E1EEC001DF9C4 /* RegisterModel.swift */,
 			);
 			path = AuthModel;
@@ -325,7 +331,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				92B4EB90265D41FA001DF9C4 /* GSPASSAPI.swift in Sources */,
+				925706A02662550A0058B3D8 /* LoginModel.swift in Sources */,
 				92951AD8265D10B300F795E1 /* MainViewController.swift in Sources */,
+				9257069E266254B50058B3D8 /* LoginViewModel.swift in Sources */,
 				92B4EBA4265E5195001DF9C4 /* StatusCode.swift in Sources */,
 				928D24C32656680600A9E343 /* AppDelegate.swift in Sources */,
 				928D24C52656680600A9E343 /* SceneDelegate.swift in Sources */,
