@@ -13,6 +13,7 @@ enum GSPASSAPI {
     // Authorization
     case register(_ registerModel: RegisterModel)
     case login(_ userId: String, _ password: String)
+    case tokenRefresh
     case password
     case overlap
 }
@@ -30,7 +31,8 @@ extension GSPASSAPI {
              .login,
              .password:
             return .post
-        case .overlap:
+        case .overlap,
+             .tokenRefresh:
             return .get
         }
     }
@@ -67,6 +69,8 @@ extension GSPASSAPI {
              .password,
              .overlap:
             return nil
+        case .tokenRefresh:
+            return ["refresh-token": "Bearer \(refreshToken)"]
         }
     }
 
@@ -76,6 +80,8 @@ extension GSPASSAPI {
             return "/register"
         case .login:
             return "/login"
+        case .tokenRefresh:
+            return "/refresh"
         case .password:
             return "/password"
         case .overlap:
