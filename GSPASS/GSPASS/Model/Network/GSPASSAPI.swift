@@ -70,7 +70,7 @@ extension GSPASSAPI {
              .overlap:
             return nil
         case .tokenRefresh:
-            return ["refresh-token": "Bearer \(refreshToken)"]
+            return ["X-Refresh_Token": "Bearer \(refreshToken)"]
         }
     }
 
