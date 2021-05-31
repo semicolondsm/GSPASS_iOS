@@ -12,6 +12,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var pwdTextField: UITextField!
     @IBOutlet weak var movingView: UIView!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +25,6 @@ class LoginViewController: UIViewController {
 
 // MARK: - TextFiled
 extension LoginViewController: UITextFieldDelegate {
-
     func setTextFields() {
         idTextField.delegate = self
         pwdTextField.delegate = self
