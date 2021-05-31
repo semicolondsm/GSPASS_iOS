@@ -10,8 +10,8 @@ import UIKit
 extension UITextField {
     func setTextField() {
         self.layer.borderWidth = 0.5
-        self.layer.borderColor = #colorLiteral(red: 0.4392156863, green: 0.4392478466, blue: 0.4391593933, alpha: 1)
-        self.layer.cornerRadius = 5
+        self.layer.borderColor = #colorLiteral(red: 0.337254902, green: 0.337254902, blue: 0.337254902, alpha: 1)
+        self.layer.cornerRadius = 10
         self.addLeftPadding()
     }
 
