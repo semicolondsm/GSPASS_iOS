@@ -32,7 +32,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="1bV-P7-fVK"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" textContentType="username"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Sgo-8o-7nP">
@@ -41,7 +41,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="28f-rF-TcO"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gC6-fh-Mpe">
@@ -88,8 +88,10 @@
                     </view>
                     <connections>
                         <outlet property="idTextField" destination="HrB-qV-OLL" id="V2F-U8-NC4"/>
+                        <outlet property="loginButton" destination="gC6-fh-Mpe" id="DKY-IB-Img"/>
                         <outlet property="movingView" destination="Anr-F6-aj8" id="4xR-dF-mUQ"/>
                         <outlet property="pwdTextField" destination="Sgo-8o-7nP" id="tAj-bE-Y2N"/>
+                        <outlet property="registerButton" destination="cCp-DB-AAt" id="Nno-3S-K2j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
