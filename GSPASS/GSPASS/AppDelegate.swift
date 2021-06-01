@@ -19,16 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        HTTPClient.shared.networking(.tokenRefresh, TokenModel.self).subscribe(onNext: { token in
-            self.keychain.set("ACCESS-TOKEN", forKey: token.access_token)
-            self.keychain.set("REFRESH-TOKEN", forKey: token.refresh_token)
+        HTTPClient.shared.networking(.tokenRefresh, TokenModel.self).subscribe(onSuccess: { token in
+            self.keychain.set("ACCESS-TOKEN", forKey: token.accessToken)
+            self.keychain.set("REFRESH-TOKEN", forKey: token.refreshToken)
             self.setRootViewController("Main", "MainViewController")
-        }, onError: { _ in
+        }, onFailure: { _ in
             self.setRootViewController("Auth", "LoginViewController")
-        }).disposed(by: disposeBag)
-        
-        
-        
+        })
+        .disposed(by: disposeBag)
+
         return true
     }
     
