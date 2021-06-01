@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (5.4.3)
   - KeychainSwift (19.0.0)
+  - Loaf (0.7.0)
   - RxAlamofire (6.1.1):
     - RxAlamofire/Core (= 6.1.1)
   - RxAlamofire/Core (6.1.1):
@@ -17,6 +18,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - KeychainSwift (~> 19.0)
+  - Loaf
   - RxAlamofire
   - RxCocoa (= 6.2.0)
   - RxSwift (= 6.2.0)
@@ -26,6 +28,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - KeychainSwift
+    - Loaf
     - RxAlamofire
     - RxCocoa
     - RxRelay
@@ -35,12 +38,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
+  Loaf: d69937cd00649f3fa260beb8b7aef0a1feb861ef
   RxAlamofire: beb75a1c452d0de225651db4903f5d29d034a620
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
 
-PODFILE CHECKSUM: f2e317c9d1d799b71cdd19b2357a2ff31bea065d
+PODFILE CHECKSUM: 42261eaca7cbd30c86fb899a325e47207de5c3e2
 
 COCOAPODS: 1.10.1
