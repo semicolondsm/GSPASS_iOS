@@ -5,4 +5,10 @@
 //  Created by 김수완 on 2021/05/25.
 //
 
-import Foundation
+import UIKit
+
+class MainViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
