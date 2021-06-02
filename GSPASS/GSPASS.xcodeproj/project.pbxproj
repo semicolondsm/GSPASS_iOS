@@ -44,7 +44,7 @@
 		928D24CE2656680700A9E343 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		928D24D02656680700A9E343 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92951AA8265B26B600F795E1 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		92951AD7265D10B300F795E1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = GSPASS/View/VC/MainViewController.swift; sourceTree = SOURCE_ROOT; };
+		92951AD7265D10B300F795E1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = GSPASS/View/VC/Main/MainViewController.swift; sourceTree = SOURCE_ROOT; };
 		92951ADA265D10BD00F795E1 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		92951ADD265D10D500F795E1 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		92B4EB8B265D41CE001DF9C4 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
@@ -107,6 +107,22 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		9276852C2667142F00227DB5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				92951AD7265D10B300F795E1 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		9276852D2667144F00227DB5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				92951ADA265D10BD00F795E1 /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		928D24B62656680600A9E343 = {
 			isa = PBXGroup;
 			children = (
@@ -154,8 +170,8 @@
 		92951AB2265D0F8100F795E1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9276852D2667144F00227DB5 /* Main */,
 				9257069C266253A50058B3D8 /* Auth */,
-				92951ADA265D10BD00F795E1 /* MainViewModel.swift */,
 				9276852A2664850B00227DB5 /* ViewModelProtocol.swift */,
 			);
 			path = ViewModel;
@@ -182,8 +198,8 @@
 		92951AB6265D0FB800F795E1 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				9276852C2667142F00227DB5 /* Main */,
 				925706972662536C0058B3D8 /* Auth */,
-				92951AD7265D10B300F795E1 /* MainViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
