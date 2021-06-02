@@ -46,7 +46,7 @@ extension GSPASSAPI {
                     "user_id": registerModel.user_id!,
                     "registerModel.password": registerModel.password!]
         case .login(let userId, let password):
-            return ["user_id": userId,
+            return ["id": userId,
                     "password": password]
         default:
             return nil
