@@ -13,5 +13,6 @@ target 'GSPASS' do
   pod 'RxAlamofire'  
   pod 'KeychainSwift', '~> 19.0'
   pod 'Loaf'
+  pod 'CollectionViewPagingLayout'
 
 end
