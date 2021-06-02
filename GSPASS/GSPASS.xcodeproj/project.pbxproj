@@ -13,6 +13,8 @@
 		925706A02662550A0058B3D8 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9257069F2662550A0058B3D8 /* TokenModel.swift */; };
 		92768529266459F300227DB5 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92768528266459F300227DB5 /* UITextField.swift */; };
 		9276852B2664850B00227DB5 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276852A2664850B00227DB5 /* ViewModelProtocol.swift */; };
+		9276853026675A8700227DB5 /* MealCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276852F26675A8700227DB5 /* MealCollectionViewCell.swift */; };
+		9276853226675AA800227DB5 /* MealCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9276853126675AA800227DB5 /* MealCollectionViewCell.xib */; };
 		928D24C32656680600A9E343 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D24C22656680600A9E343 /* AppDelegate.swift */; };
 		928D24CA2656680600A9E343 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 928D24C82656680600A9E343 /* Main.storyboard */; };
 		928D24CC2656680700A9E343 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 928D24CB2656680700A9E343 /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 		9257069F2662550A0058B3D8 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 		92768528266459F300227DB5 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		9276852A2664850B00227DB5 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		9276852F26675A8700227DB5 /* MealCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCollectionViewCell.swift; sourceTree = "<group>"; };
+		9276853126675AA800227DB5 /* MealCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealCollectionViewCell.xib; sourceTree = "<group>"; };
 		928D24BF2656680600A9E343 /* GSPASS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GSPASS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		928D24C22656680600A9E343 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		928D24C92656680600A9E343 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				92951AD7265D10B300F795E1 /* MainViewController.swift */,
+				9276852F26675A8700227DB5 /* MealCollectionViewCell.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -121,6 +126,14 @@
 				92951ADA265D10BD00F795E1 /* MainViewModel.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		9276852E26675A5800227DB5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9276853126675AA800227DB5 /* MealCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		928D24B62656680600A9E343 = {
@@ -189,6 +202,7 @@
 		92951AB5265D0FAB00F795E1 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				9276852E26675A5800227DB5 /* Cell */,
 				928D24C82656680600A9E343 /* Main.storyboard */,
 				9257069A266253920058B3D8 /* Auth.storyboard */,
 			);
@@ -284,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92951AA9265B26B600F795E1 /* .swiftlint.yml in Resources */,
+				9276853226675AA800227DB5 /* MealCollectionViewCell.xib in Resources */,
 				928D24CF2656680700A9E343 /* LaunchScreen.storyboard in Resources */,
 				9257069B266253920058B3D8 /* Auth.storyboard in Resources */,
 				928D24CC2656680700A9E343 /* Assets.xcassets in Resources */,
@@ -362,6 +377,7 @@
 				92951AD8265D10B300F795E1 /* MainViewController.swift in Sources */,
 				9257069E266254B50058B3D8 /* LoginViewModel.swift in Sources */,
 				9276852B2664850B00227DB5 /* ViewModelProtocol.swift in Sources */,
+				9276853026675A8700227DB5 /* MealCollectionViewCell.swift in Sources */,
 				92B4EBA4265E5195001DF9C4 /* StatusCode.swift in Sources */,
 				928D24C32656680600A9E343 /* AppDelegate.swift in Sources */,
 				92B4EBA1265E1EEC001DF9C4 /* RegisterModel.swift in Sources */,

@@ -6,18 +6,48 @@
 //
 
 import UIKit
+import CollectionViewPagingLayout
 
 class MainViewController: UIViewController {
 
-    @IBOutlet weak var breakfastMealLabel: UILabel!
-    @IBOutlet weak var lunchMealLabel: UILabel!
-    @IBOutlet weak var dinerMealLabel: UILabel!
+    @IBOutlet weak var mealCollectionView: UICollectionView!
     @IBOutlet weak var personalActionBtn: UIBarButtonItem!
+
+    private let layout = CollectionViewPagingLayout()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setNavigationbar()
+        setCollectionView()
+        bind()
+    }
+    
+    func bind() {
+    }
+}
+
+// MARK: - Collection View
+extension MainViewController: UICollectionViewDataSource {
+    func setCollectionView() {
+        mealCollectionView.collectionViewLayout = layout
+        mealCollectionView.isPagingEnabled = true
+        layout.numberOfVisibleItems = nil
+        mealCollectionView.dataSource = self
+        registerCell()
+    }
+
+    func registerCell() {
+        let nib = UINib(nibName: "MealCollectionViewCell", bundle: nil)
+        mealCollectionView.register(nib, forCellWithReuseIdentifier: "MealCollectionViewCell")
+    }
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        collectionView.dequeueReusableCell(withReuseIdentifier: "MealCollectionViewCell", for: indexPath)
     }
 }
 
