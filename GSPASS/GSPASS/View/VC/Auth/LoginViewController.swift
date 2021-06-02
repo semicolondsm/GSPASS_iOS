@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
+import Loaf
 
 class LoginViewController: UIViewController {
 
@@ -15,10 +18,35 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
 
+    let viewModel = LoginViewModel()
+    let disposeBag = DisposeBag()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         addKeyboardNotification()
         setTextFields()
+        bind()
+    }
+
+    func bind() {
+        let input = LoginViewModel.Input(idTextFieldSubject: idTextField.rx.text.orEmpty.asDriver(),
+                                         pwdTextFieldSubject: pwdTextField.rx.text.orEmpty.asDriver(),
+                                         loginBtnSubject: loginButton.rx.tap.asDriver())
+        let output = viewModel.transform(input)
+
+        output.loginResult.subscribe(onNext: { errorMessage in
+            Loaf(errorMessage, state: .error, location: .top, sender: self).show()
+        }, onCompleted: {
+            // 메인화면으로 이동
+            print("!")
+        })
+        .disposed(by: disposeBag)
+
+        registerButton.rx.tap.subscribe(onNext: {
+            // 회원가입 화면으로 이동
+            print("!")
+        })
+        .disposed(by: disposeBag)
     }
 
 }
