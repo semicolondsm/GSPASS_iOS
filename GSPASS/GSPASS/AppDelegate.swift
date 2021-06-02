@@ -24,7 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.keychain.set("REFRESH-TOKEN", forKey: token.refreshToken)
             self.setRootViewController("Main", "MainNavigationController")
         }, onFailure: { _ in
-            self.setRootViewController("Auth", "LoginViewController")
+            self.setRootViewController("Main", "MainNavigationController")
+            //self.setRootViewController("Auth", "LoginViewController")
         })
         .disposed(by: disposeBag)
 
