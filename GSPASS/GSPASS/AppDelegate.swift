@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         HTTPClient.shared.networking(.tokenRefresh, TokenModel.self).subscribe(onSuccess: { token in
             self.keychain.set("ACCESS-TOKEN", forKey: token.accessToken)
             self.keychain.set("REFRESH-TOKEN", forKey: token.refreshToken)
-            self.setRootViewController("Main", "MainViewController")
+            self.setRootViewController("Main", "MainNavigationController")
         }, onFailure: { _ in
             self.setRootViewController("Auth", "LoginViewController")
         })
