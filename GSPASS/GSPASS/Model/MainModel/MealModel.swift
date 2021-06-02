@@ -7,3 +7,8 @@
 
 import Foundation
 
+struct MealModel {
+    let breakfast: [String]?
+    let lunch: [String]?
+    let dinner: [String]?
+}
