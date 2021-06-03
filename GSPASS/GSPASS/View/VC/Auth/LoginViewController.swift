@@ -38,7 +38,10 @@ class LoginViewController: UIViewController {
             Loaf(errorMessage, state: .error, location: .top, sender: self).show()
         }, onCompleted: {
             // 메인화면으로 이동
-            print("!")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vcName = storyboard.instantiateViewController(withIdentifier: "MainNavigationController")
+            vcName.modalPresentationStyle = .fullScreen
+            self.present(vcName, animated: true, completion: nil)
         })
         .disposed(by: disposeBag)
 

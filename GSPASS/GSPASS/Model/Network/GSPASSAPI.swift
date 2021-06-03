@@ -16,6 +16,9 @@ enum GSPASSAPI {
     case tokenRefresh
     case password
     case overlap
+
+    // Main
+    case getMeal(_ dateIndex: Int)
 }
 
 extension GSPASSAPI {
@@ -29,10 +32,11 @@ extension GSPASSAPI {
         switch self {
         case .register,
              .login,
-             .password:
+             .password,
+             .tokenRefresh:
             return .post
         case .overlap,
-             .tokenRefresh:
+             .getMeal:
             return .get
         }
     }
@@ -70,7 +74,9 @@ extension GSPASSAPI {
              .overlap:
             return nil
         case .tokenRefresh:
-            return ["X-Refresh_Token": "Bearer \(refreshToken)"]
+            return ["X-Refresh-Token": refreshToken]
+        case .getMeal:
+            return ["Authorization": "Bearer \(accessTocken)"]
         }
     }
 
@@ -86,6 +92,8 @@ extension GSPASSAPI {
             return "/password"
         case .overlap:
             return "/overlap"
+        case .getMeal(let dateIndex):
+            return "/meals?day=\(dateIndex)"
         }
     }
 

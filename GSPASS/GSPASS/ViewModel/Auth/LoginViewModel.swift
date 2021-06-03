@@ -38,8 +38,8 @@ class LoginViewModel: ViewModel {
             .subscribe(onNext: { (id, pwd) in
                 HTTPClient.shared.networking(.login(id, pwd), TokenModel.self)
                     .subscribe(onSuccess: { token in
-                        self.keychain.set("ACCESS-TOKEN", forKey: token.accessToken)
-                        self.keychain.set("REFRESH-TOKEN", forKey: token.refreshToken)
+                        self.keychain.set(token.accessToken, forKey: "ACCESS-TOKEN")
+                        self.keychain.set(token.refreshToken, forKey: "REFRESH-TOKEN")
                         loginResult.onCompleted()
                     }, onFailure: { error in
                         switch error as? StatusCode {
