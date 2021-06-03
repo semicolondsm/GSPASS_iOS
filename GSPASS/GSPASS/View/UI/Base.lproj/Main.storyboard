@@ -32,14 +32,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘의 급식" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVI-eM-4VF">
-                                <rect key="frame" x="24" y="106" width="141" height="37"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BH7-dE-ky3">
-                                <rect key="frame" x="0.0" y="144" width="375" height="423"/>
+                                <rect key="frame" x="0.0" y="104" width="375" height="463"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YXq-Cv-0u9">
                                     <size key="itemSize" width="128" height="128"/>
@@ -53,11 +47,9 @@
                         <viewLayoutGuide key="safeArea" id="7rE-Ee-9h2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="BH7-dE-ky3" firstAttribute="top" secondItem="7rE-Ee-9h2" secondAttribute="top" constant="100" id="077-sX-l0A"/>
-                            <constraint firstItem="AVI-eM-4VF" firstAttribute="leading" secondItem="7rE-Ee-9h2" secondAttribute="leading" constant="24" id="6B5-dz-sMh"/>
+                            <constraint firstItem="BH7-dE-ky3" firstAttribute="top" secondItem="7rE-Ee-9h2" secondAttribute="top" constant="60" id="077-sX-l0A"/>
                             <constraint firstItem="BH7-dE-ky3" firstAttribute="leading" secondItem="7rE-Ee-9h2" secondAttribute="leading" id="TxR-Jn-Rdd"/>
                             <constraint firstItem="7rE-Ee-9h2" firstAttribute="bottom" secondItem="BH7-dE-ky3" secondAttribute="bottom" constant="100" id="aSV-IG-jhq"/>
-                            <constraint firstItem="BH7-dE-ky3" firstAttribute="top" secondItem="AVI-eM-4VF" secondAttribute="bottom" constant="1" id="hXd-BB-OPo"/>
                             <constraint firstItem="BH7-dE-ky3" firstAttribute="trailing" secondItem="7rE-Ee-9h2" secondAttribute="trailing" id="nm3-Sn-adm"/>
                         </constraints>
                     </view>

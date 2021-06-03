@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 import CollectionViewPagingLayout
 
 class MainViewController: UIViewController {
@@ -13,7 +15,12 @@ class MainViewController: UIViewController {
     @IBOutlet weak var mealCollectionView: UICollectionView!
     @IBOutlet weak var personalActionBtn: UIBarButtonItem!
 
+    private let disposeBag = DisposeBag()
     private let layout = CollectionViewPagingLayout()
+    private let viewModel = MainViewModel()
+    private var currentPage = 0
+
+    private let getMeal = PublishSubject<Int>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,18 +29,35 @@ class MainViewController: UIViewController {
         setCollectionView()
         bind()
     }
-    
+
     func bind() {
+        let input = MainViewModel.Input(getMeal: getMeal.asDriver(onErrorJustReturn: 0))
+        let output = viewModel.transform(input)
+
+        output.mealList.bind(to: mealCollectionView.rx.items(
+                                cellIdentifier: "MealCollectionViewCell",
+                                cellType: MealCollectionViewCell.self)) { _, item, cell in
+            cell.bind(dateString: item.dateString, meal: item.meal)
+            if self.layout.currentPage == 0 {
+                self.layout.goToNextPage(animated: false)
+            }
+
+        }.disposed(by: disposeBag)
+
+        personalActionBtn.rx.tap.subscribe(onNext: {
+        }).disposed(by: disposeBag)
+
+        getMeal.onNext(0)
     }
 }
 
 // MARK: - Collection View
-extension MainViewController: UICollectionViewDataSource {
+extension MainViewController: UICollectionViewDelegate {
     func setCollectionView() {
         mealCollectionView.collectionViewLayout = layout
         mealCollectionView.isPagingEnabled = true
+        mealCollectionView.delegate = self
         layout.numberOfVisibleItems = nil
-        mealCollectionView.dataSource = self
         registerCell()
     }
 
@@ -42,12 +66,11 @@ extension MainViewController: UICollectionViewDataSource {
         mealCollectionView.register(nib, forCellWithReuseIdentifier: "MealCollectionViewCell")
     }
 
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        collectionView.dequeueReusableCell(withReuseIdentifier: "MealCollectionViewCell", for: indexPath)
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if currentPage != layout.currentPage {
+            currentPage = layout.currentPage
+            getMeal.onNext(currentPage)
+        }
     }
 }
 
