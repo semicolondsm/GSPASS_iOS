@@ -16,6 +16,8 @@
 		9276853026675A8700227DB5 /* MealCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276852F26675A8700227DB5 /* MealCollectionViewCell.swift */; };
 		9276853226675AA800227DB5 /* MealCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9276853126675AA800227DB5 /* MealCollectionViewCell.xib */; };
 		927685352667975A00227DB5 /* MealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927685342667975A00227DB5 /* MealModel.swift */; };
+		927685372667A9D900227DB5 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927685362667A9D900227DB5 /* Date.swift */; };
+		927685392668889B00227DB5 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927685382668889B00227DB5 /* Array.swift */; };
 		928D24C32656680600A9E343 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D24C22656680600A9E343 /* AppDelegate.swift */; };
 		928D24CA2656680600A9E343 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 928D24C82656680600A9E343 /* Main.storyboard */; };
 		928D24CC2656680700A9E343 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 928D24CB2656680700A9E343 /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 		9276852F26675A8700227DB5 /* MealCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCollectionViewCell.swift; sourceTree = "<group>"; };
 		9276853126675AA800227DB5 /* MealCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealCollectionViewCell.xib; sourceTree = "<group>"; };
 		927685342667975A00227DB5 /* MealModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealModel.swift; sourceTree = "<group>"; };
+		927685362667A9D900227DB5 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		927685382668889B00227DB5 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		928D24BF2656680600A9E343 /* GSPASS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GSPASS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		928D24C22656680600A9E343 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		928D24C92656680600A9E343 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				92768528266459F300227DB5 /* UITextField.swift */,
+				927685362667A9D900227DB5 /* Date.swift */,
+				927685382668889B00227DB5 /* Array.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -381,6 +387,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				927685352667975A00227DB5 /* MealModel.swift in Sources */,
+				927685372667A9D900227DB5 /* Date.swift in Sources */,
+				927685392668889B00227DB5 /* Array.swift in Sources */,
 				92B4EB90265D41FA001DF9C4 /* GSPASSAPI.swift in Sources */,
 				925706A02662550A0058B3D8 /* TokenModel.swift in Sources */,
 				92951AD8265D10B300F795E1 /* MainViewController.swift in Sources */,
