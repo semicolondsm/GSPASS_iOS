@@ -18,7 +18,7 @@ extension Date {
         return Calendar.current.date(bySettingHour: 12, minute: 0, second: 0, of: self)!
     }
     var month: Int {
-        return Calendar.current.component(.month,  from: self)
+        return Calendar.current.component(.month, from: self)
     }
     var isLastDayOfMonth: Bool {
         return dayAfter(day: 1).month != month
