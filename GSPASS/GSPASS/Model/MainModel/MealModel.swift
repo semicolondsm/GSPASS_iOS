@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MealModel {
+struct MealModel: Codable {
     let breakfast: [String]?
     let lunch: [String]?
     let dinner: [String]?
