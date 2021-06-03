@@ -9,6 +9,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 import CollectionViewPagingLayout
+import KeychainSwift
 
 class MainViewController: UIViewController {
 
@@ -45,9 +46,34 @@ class MainViewController: UIViewController {
         }.disposed(by: disposeBag)
 
         personalActionBtn.rx.tap.subscribe(onNext: {
+            self.openMenu()
         }).disposed(by: disposeBag)
 
         getMeal.onNext(0)
+    }
+}
+
+// MARK: - ActionSheet
+extension MainViewController {
+    func openMenu() {
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let changePassword = UIAlertAction(title: "비밀번호 변경", style: .default) { _ in
+            //
+        }
+        let logout = UIAlertAction(title: "로그아웃", style: .destructive) { _ in
+            let keychainSwift = KeychainSwift()
+            keychainSwift.clear()
+            let storyboard = UIStoryboard(name: "Auth", bundle: nil)
+            let vcName = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+            vcName.modalPresentationStyle = .fullScreen
+            self.present(vcName, animated: true, completion: nil)
+        }
+        let cancle = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        actionSheet.addAction(changePassword)
+        actionSheet.addAction(logout)
+        actionSheet.addAction(cancle)
+        actionSheet.view.tintColor = .white
+        self.present(actionSheet, animated: true, completion: nil)
     }
 }
 
