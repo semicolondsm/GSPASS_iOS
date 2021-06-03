@@ -56,7 +56,7 @@ class MainViewController: UIViewController {
 // MARK: - ActionSheet
 extension MainViewController {
     func openMenu() {
-        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let actionSheet = UIAlertController(title: "school name", message: "gcn", preferredStyle: .actionSheet)
         let changePassword = UIAlertAction(title: "비밀번호 변경", style: .default) { _ in
             //
         }
