@@ -10,6 +10,7 @@ import RxCocoa
 import RxSwift
 import CollectionViewPagingLayout
 import KeychainSwift
+import FloatingPanel
 
 class MainViewController: UIViewController {
 
@@ -28,6 +29,7 @@ class MainViewController: UIViewController {
 
         setNavigationbar()
         setCollectionView()
+        setFloatingPanel()
         bind()
     }
 
@@ -112,5 +114,24 @@ extension MainViewController {
         navigationItem.leftBarButtonItem = leftButton
 
         personalActionBtn.image = UIImage(named: "customPerson")?.withRenderingMode(.alwaysOriginal)
+    }
+}
+
+// MARK: - FloatingPanel
+extension MainViewController: FloatingPanelControllerDelegate {
+    func setFloatingPanel() {
+        let fpc = FloatingPanelController(delegate: self)
+        let contentViewcontroller = storyboard?
+            .instantiateViewController(identifier: "BottomSheetViewController") as? BottomSheetViewController
+
+        fpc.surfaceView.backgroundColor = #colorLiteral(red: 0.1176470588, green: 0.1176470588, blue: 0.1176470588, alpha: 0.95)
+        fpc.surfaceView.appearance.cornerRadius = 24.0
+        fpc.surfaceView.appearance.shadows = []
+        fpc.surfaceView.appearance.borderWidth = 1.0 / traitCollection.displayScale
+        fpc.surfaceView.appearance.borderColor = UIColor.black.withAlphaComponent(0.2)
+        fpc.layout = MyFloatingPanelLayout()
+
+        fpc.set(contentViewController: contentViewcontroller)
+        fpc.addPanel(toParent: self)
     }
 }
