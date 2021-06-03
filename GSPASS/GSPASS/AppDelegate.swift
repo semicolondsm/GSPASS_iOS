@@ -20,12 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         HTTPClient.shared.networking(.tokenRefresh, TokenModel.self).subscribe(onSuccess: { token in
-            self.keychain.set("ACCESS-TOKEN", forKey: token.accessToken)
-            self.keychain.set("REFRESH-TOKEN", forKey: token.refreshToken)
+            self.keychain.set(token.accessToken, forKey: "ACCESS-TOKEN")
+            self.keychain.set(token.refreshToken, forKey: "REFRESH-TOKEN")
             self.setRootViewController("Main", "MainNavigationController")
         }, onFailure: { _ in
-            self.setRootViewController("Main", "MainNavigationController")
-            //self.setRootViewController("Auth", "LoginViewController")
+            self.setRootViewController("Auth", "LoginViewController")
         })
         .disposed(by: disposeBag)
 
@@ -34,8 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func setRootViewController(_ storyboardName: String, _ viewControllerIdentifier: String){
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        let tutorialStoryboard = UIStoryboard(name: storyboardName, bundle: nil)
-        let viewController = tutorialStoryboard.instantiateViewController(withIdentifier: viewControllerIdentifier)
+        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: viewControllerIdentifier)
         self.window?.rootViewController = viewController
         self.window?.makeKeyAndVisible()
     }
