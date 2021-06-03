@@ -29,7 +29,6 @@ class MainViewModel: ViewModel {
         let mealList = PublishRelay<[(dateString: String, meal: MealModel)]>()
 
         input.getMeal.asObservable().subscribe(onNext: { index in
-            print(self.roadOption(index))
             switch self.roadOption(index) {
             case .firstTime:
                 self.getMeal(dateIndex: 0) {
@@ -72,7 +71,6 @@ extension MainViewModel {
     }
 
     private func roadOption(_ index: Int) -> RoadMoreMealOption {
-        print(roadedDateIndex)
         return meals.count == 0 ? .firstTime :
                index == meals.count - 1 ? .nextDay :
                index == 0 ? .previousDay : .unneeded
