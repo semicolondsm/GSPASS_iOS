@@ -5,6 +5,7 @@ PODS:
   - KeychainSwift (19.0.0)
   - Loaf (0.7.0)
   - NeuKit (0.0.4)
+  - QRCode (2.0)
   - RxAlamofire (6.1.1):
     - RxAlamofire/Core (= 6.1.1)
   - RxAlamofire/Core (6.1.1):
@@ -25,6 +26,7 @@ DEPENDENCIES:
   - KeychainSwift (~> 19.0)
   - Loaf
   - NeuKit
+  - QRCode
   - RxAlamofire
   - RxCocoa (= 6.2.0)
   - RxSwift (= 6.2.0)
@@ -38,6 +40,7 @@ SPEC REPOS:
     - KeychainSwift
     - Loaf
     - NeuKit
+    - QRCode
     - RxAlamofire
     - RxCocoa
     - RxRelay
@@ -51,12 +54,13 @@ SPEC CHECKSUMS:
   KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
   Loaf: d69937cd00649f3fa260beb8b7aef0a1feb861ef
   NeuKit: 4b0ee50ed38fcd9f424a29d30e43d4e32dabbb25
+  QRCode: f98a1886c8f37523704a7512a4c0cd45b34c18a4
   RxAlamofire: beb75a1c452d0de225651db4903f5d29d034a620
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
 
-PODFILE CHECKSUM: 7e423591cd6ee65c600ff7a42e1c3acf91eaca86
+PODFILE CHECKSUM: aeeca961bf2641fc887cd9adb7c7511e61bcc9a2
 
 COCOAPODS: 1.10.1

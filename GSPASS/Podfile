@@ -16,5 +16,6 @@ target 'GSPASS' do
   pod 'CollectionViewPagingLayout'
   pod 'FloatingPanel'
   pod 'NeuKit'
+  pod 'QRCode'
 
 end
