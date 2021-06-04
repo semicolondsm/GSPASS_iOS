@@ -124,7 +124,7 @@ extension MainViewController: FloatingPanelControllerDelegate {
         let contentViewcontroller = storyboard?
             .instantiateViewController(identifier: "BottomSheetViewController") as? BottomSheetViewController
 
-        fpc.surfaceView.backgroundColor = #colorLiteral(red: 0.1176470588, green: 0.1176470588, blue: 0.1176470588, alpha: 0.95)
+        fpc.surfaceView.backgroundColor = #colorLiteral(red: 0.1176470588, green: 0.1176470588, blue: 0.1176470588, alpha: 1)
         fpc.surfaceView.appearance.cornerRadius = 24.0
         fpc.surfaceView.appearance.shadows = []
         fpc.surfaceView.appearance.borderWidth = 1.0 / traitCollection.displayScale

@@ -72,15 +72,69 @@
                     <view key="view" contentMode="scaleToFill" id="Bot-Zh-rDD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKF-jT-KVB">
+                                <rect key="frame" x="62.5" y="150" width="250" height="250"/>
+                                <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="8MN-fM-JXG"/>
+                                    <constraint firstAttribute="width" constant="250" id="iU7-fx-dfz"/>
+                                </constraints>
+                                <state key="normal" image="PASSBtnLabel"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="hapticLevel">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                        <real key="value" value="-5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                        <real key="value" value="-5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="darkShadowColor">
+                                        <color key="value" white="0.10000000000000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lightShadowColor">
+                                        <color key="value" white="0.14999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="125"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASS 발급은 18:00 부터 시작됩니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3g-zV-og1">
+                                <rect key="frame" x="60.5" y="487" width="254" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="rDa-Qd-SKU"/>
+                        <constraints>
+                            <constraint firstItem="z3g-zV-og1" firstAttribute="top" secondItem="cKF-jT-KVB" secondAttribute="bottom" constant="87" id="BHb-i8-KL5"/>
+                            <constraint firstItem="cKF-jT-KVB" firstAttribute="top" secondItem="rDa-Qd-SKU" secondAttribute="top" constant="150" id="QOE-VV-yWb"/>
+                            <constraint firstItem="z3g-zV-og1" firstAttribute="centerX" secondItem="rDa-Qd-SKU" secondAttribute="centerX" id="TS2-yy-bty"/>
+                            <constraint firstItem="cKF-jT-KVB" firstAttribute="centerX" secondItem="rDa-Qd-SKU" secondAttribute="centerX" id="eks-rR-yyF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passButton" destination="cKF-jT-KVB" id="1Rh-cp-DaJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LVc-sp-vTc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-190" y="-57"/>
+            <point key="canvasLocation" x="-191.19999999999999" y="-57.121439280359823"/>
         </scene>
     </scenes>
     <resources>
+        <image name="PASSBtnLabel" width="130.5" height="41"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

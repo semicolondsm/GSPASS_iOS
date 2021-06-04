@@ -9,8 +9,19 @@ import UIKit
 import FloatingPanel
 
 class BottomSheetViewController: UIViewController {
+
+    @IBOutlet weak var passButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUI()
+    }
+}
+
+// MARK: - UI
+extension BottomSheetViewController {
+    func setUI() {
+        passButton.layer.cornerRadius = passButton.frame.height/2
     }
 }
 
