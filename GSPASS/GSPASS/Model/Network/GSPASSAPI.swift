@@ -10,12 +10,13 @@ import Alamofire
 import KeychainSwift
 
 enum GSPASSAPI {
-    // Authorization
+    // Auth
     case register(_ registerModel: RegisterModel)
     case login(_ userId: String, _ password: String)
     case tokenRefresh
     case password
     case overlap
+    case userInfo
 
     // Main
     case getMeal(_ dateIndex: Int)
@@ -36,6 +37,7 @@ extension GSPASSAPI {
              .tokenRefresh:
             return .post
         case .overlap,
+             .userInfo,
              .getMeal:
             return .get
         }
@@ -75,7 +77,8 @@ extension GSPASSAPI {
             return nil
         case .tokenRefresh:
             return ["X-Refresh-Token": refreshToken]
-        case .getMeal:
+        case .getMeal,
+             .userInfo:
             return ["Authorization": "Bearer \(accessTocken)"]
         }
     }
@@ -92,6 +95,8 @@ extension GSPASSAPI {
             return "/password"
         case .overlap:
             return "/overlap"
+        case .userInfo:
+            return "/information"
         case .getMeal(let dateIndex):
             return "/meals?day=\(dateIndex)"
         }

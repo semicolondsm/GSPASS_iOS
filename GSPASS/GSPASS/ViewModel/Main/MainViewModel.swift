@@ -19,14 +19,17 @@ class MainViewModel: ViewModel {
 
     struct Input {
         let getMeal: Driver<Int>
+        let getUserInfo: Driver<Void>
     }
 
     struct Output {
         let mealList: PublishRelay<[(dateString: String, meal: MealModel)]>
+        let userInfo: PublishRelay<UserInfoModel>
     }
 
     func transform(_ input: Input) -> Output {
         let mealList = PublishRelay<[(dateString: String, meal: MealModel)]>()
+        let userInfo = PublishRelay<UserInfoModel>()
 
         input.getMeal.asObservable().subscribe(onNext: { index in
             switch self.roadOption(index) {
@@ -56,7 +59,15 @@ class MainViewModel: ViewModel {
         })
         .disposed(by: disposeBag)
 
-        return Output(mealList: mealList)
+        input.getUserInfo.asObservable().subscribe(onNext: {
+            HTTPClient.shared.networking(.userInfo, UserInfoModel.self).subscribe(onSuccess: { info in
+                userInfo.accept(info)
+            })
+            .disposed(by: self.disposeBag)
+        })
+        .disposed(by: disposeBag)
+
+        return Output(mealList: mealList, userInfo: userInfo)
     }
 
 }
