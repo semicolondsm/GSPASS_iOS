@@ -11,6 +11,7 @@
 		9257069B266253920058B3D8 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9257069A266253920058B3D8 /* Auth.storyboard */; };
 		9257069E266254B50058B3D8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9257069D266254B40058B3D8 /* LoginViewModel.swift */; };
 		925706A02662550A0058B3D8 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9257069F2662550A0058B3D8 /* TokenModel.swift */; };
+		92646ADA266CA05500AF486A /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92646AD9266CA05500AF486A /* UserInfoModel.swift */; };
 		92768529266459F300227DB5 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92768528266459F300227DB5 /* UITextField.swift */; };
 		9276852B2664850B00227DB5 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276852A2664850B00227DB5 /* ViewModelProtocol.swift */; };
 		9276853026675A8700227DB5 /* MealCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276852F26675A8700227DB5 /* MealCollectionViewCell.swift */; };
@@ -40,6 +41,7 @@
 		9257069A266253920058B3D8 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		9257069D266254B40058B3D8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		9257069F2662550A0058B3D8 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
+		92646AD9266CA05500AF486A /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
 		92768528266459F300227DB5 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		9276852A2664850B00227DB5 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		9276852F26675A8700227DB5 /* MealCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 			children = (
 				9257069F2662550A0058B3D8 /* TokenModel.swift */,
 				92B4EBA0265E1EEC001DF9C4 /* RegisterModel.swift */,
+				92646AD9266CA05500AF486A /* UserInfoModel.swift */,
 			);
 			path = AuthModel;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92646ADA266CA05500AF486A /* UserInfoModel.swift in Sources */,
 				927685352667975A00227DB5 /* MealModel.swift in Sources */,
 				927685372667A9D900227DB5 /* Date.swift in Sources */,
 				927685392668889B00227DB5 /* Array.swift in Sources */,
