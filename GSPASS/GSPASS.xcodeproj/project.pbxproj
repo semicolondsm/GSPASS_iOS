@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9240D65C266E5383004F5546 /* BottomSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9240D65B266E5383004F5546 /* BottomSheetViewModel.swift */; };
 		925706992662537B0058B3D8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925706982662537B0058B3D8 /* LoginViewController.swift */; };
 		9257069B266253920058B3D8 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9257069A266253920058B3D8 /* Auth.storyboard */; };
 		9257069E266254B50058B3D8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9257069D266254B40058B3D8 /* LoginViewModel.swift */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		15E8E2E1A7B781663C67ADF3 /* Pods-GSPASS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSPASS.release.xcconfig"; path = "Target Support Files/Pods-GSPASS/Pods-GSPASS.release.xcconfig"; sourceTree = "<group>"; };
 		63538831E6AC337B7650D414 /* Pods-GSPASS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSPASS.debug.xcconfig"; path = "Target Support Files/Pods-GSPASS/Pods-GSPASS.debug.xcconfig"; sourceTree = "<group>"; };
+		9240D65B266E5383004F5546 /* BottomSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewModel.swift; sourceTree = "<group>"; };
 		925706982662537B0058B3D8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9257069A266253920058B3D8 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		9257069D266254B40058B3D8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				92951ADA265D10BD00F795E1 /* MainViewModel.swift */,
+				9240D65B266E5383004F5546 /* BottomSheetViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9240D65C266E5383004F5546 /* BottomSheetViewModel.swift in Sources */,
 				92646ADA266CA05500AF486A /* UserInfoModel.swift in Sources */,
 				927685352667975A00227DB5 /* MealModel.swift in Sources */,
 				927685372667A9D900227DB5 /* Date.swift in Sources */,
