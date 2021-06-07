@@ -20,6 +20,7 @@ enum GSPASSAPI {
 
     // Main
     case getMeal(_ dateIndex: Int)
+    case issuePass
 }
 
 extension GSPASSAPI {
@@ -34,7 +35,8 @@ extension GSPASSAPI {
         case .register,
              .login,
              .password,
-             .tokenRefresh:
+             .tokenRefresh,
+             .issuePass:
             return .post
         case .overlap,
              .userInfo,
@@ -78,7 +80,8 @@ extension GSPASSAPI {
         case .tokenRefresh:
             return ["X-Refresh-Token": refreshToken]
         case .getMeal,
-             .userInfo:
+             .userInfo,
+             .issuePass:
             return ["Authorization": "Bearer \(accessTocken)"]
         }
     }
@@ -99,6 +102,8 @@ extension GSPASSAPI {
             return "/information"
         case .getMeal(let dateIndex):
             return "/meals?day=\(dateIndex)"
+        case .issuePass:
+            return "/"
         }
     }
 
