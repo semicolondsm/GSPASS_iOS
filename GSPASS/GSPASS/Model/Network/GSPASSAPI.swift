@@ -52,7 +52,7 @@ extension GSPASSAPI {
                     "gcn": registerModel.gcn!,
                     "name": registerModel.name!,
                     "user_id": registerModel.user_id!,
-                    "registerModel.password": registerModel.password!]
+                    "password": registerModel.password!]
         case .login(let userId, let password):
             return ["id": userId,
                     "password": password]
