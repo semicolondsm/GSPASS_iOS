@@ -11,8 +11,8 @@ import RxSwift
 
 class BottomSheetViewModel: ViewModel {
 
-    let disposeBag = DisposeBag()
-    
+    private let disposeBag = DisposeBag()
+
     struct Input {
         let issuePass: Driver<Void>
     }
@@ -23,7 +23,7 @@ class BottomSheetViewModel: ViewModel {
 
     func transform(_ input: Input) -> Output {
         let resultOfIssuPass = PublishSubject<String>()
-        
+
         input.issuePass.asObservable().subscribe(onNext: {
             HTTPClient.shared.networking(.issuePass, EmptyResponseModel.self).subscribe(onSuccess: { _ in
                 resultOfIssuPass.onCompleted()
@@ -38,7 +38,7 @@ class BottomSheetViewModel: ViewModel {
             .disposed(by: self.disposeBag)
         })
         .disposed(by: disposeBag)
-        
+
         return Output(resultOfIssuPass: resultOfIssuPass)
     }
 
