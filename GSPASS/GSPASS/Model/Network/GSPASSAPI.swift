@@ -21,6 +21,7 @@ enum GSPASSAPI {
     // Main
     case getMeal(_ dateIndex: Int)
     case issuePass
+    case getNextPassTime
 }
 
 extension GSPASSAPI {
@@ -40,7 +41,8 @@ extension GSPASSAPI {
             return .post
         case .overlap,
              .userInfo,
-             .getMeal:
+             .getMeal,
+             .getNextPassTime:
             return .get
         }
     }
@@ -81,7 +83,8 @@ extension GSPASSAPI {
             return ["X-Refresh-Token": refreshToken]
         case .getMeal,
              .userInfo,
-             .issuePass:
+             .issuePass,
+             .getNextPassTime:
             return ["Authorization": "Bearer \(accessTocken)"]
         }
     }
@@ -104,6 +107,8 @@ extension GSPASSAPI {
             return "/meals?day=\(dateIndex)"
         case .issuePass:
             return "/"
+        case .getNextPassTime:
+            return "/gspass/time"
         }
     }
 
