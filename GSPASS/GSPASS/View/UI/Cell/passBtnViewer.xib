@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="passBtnViewerCell" reuseIdentifier="passBtnViewerCell" id="BIE-cc-Vy1" customClass="PassBtnViewer" customModule="GSPASS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dL5-2N-Jaa" customClass="PassBtnViewer" customModule="GSPASS" customModuleProvider="target">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5en-ry-IHj">
+                        <rect key="frame" x="62.5" y="100" width="250" height="250"/>
+                        <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="250" id="hZM-QC-KlU"/>
+                            <constraint firstAttribute="height" constant="250" id="ix0-10-cCp"/>
+                        </constraints>
+                        <state key="normal" image="PASSBtnLabel"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="hapticLevel">
+                                <integer key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                <real key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                <real key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                <real key="value" value="-6"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                <real key="value" value="-6"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="darkShadowColor">
+                                <color key="value" white="0.10000000000000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="lightShadowColor">
+                                <color key="value" white="0.14999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="125"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASS 발급은 18:00 부터 시작됩니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1v-ue-tsi">
+                        <rect key="frame" x="60.5" y="628" width="254" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="5en-ry-IHj" firstAttribute="top" secondItem="dL5-2N-Jaa" secondAttribute="top" constant="100" id="2ta-q0-2b0"/>
+                    <constraint firstAttribute="bottom" secondItem="D1v-ue-tsi" secondAttribute="bottom" constant="18" id="7M9-wW-xFi"/>
+                    <constraint firstItem="5en-ry-IHj" firstAttribute="centerX" secondItem="dL5-2N-Jaa" secondAttribute="centerX" id="qyO-zP-IXd"/>
+                    <constraint firstItem="D1v-ue-tsi" firstAttribute="centerX" secondItem="dL5-2N-Jaa" secondAttribute="centerX" id="yuj-Fr-QdS"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="375" height="667"/>
+            <connections>
+                <outlet property="availableToApplyTimeLabel" destination="D1v-ue-tsi" id="Xc0-Zh-Lcr"/>
+                <outlet property="passBtn" destination="5en-ry-IHj" id="x9m-Yk-6BY"/>
+            </connections>
+            <point key="canvasLocation" x="-660.14492753623199" y="239.39732142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="PASSBtnLabel" width="130.5" height="41"/>
+    </resources>
+</document>

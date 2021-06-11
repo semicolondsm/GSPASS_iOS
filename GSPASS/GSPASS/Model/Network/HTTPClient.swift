@@ -22,7 +22,7 @@ class HTTPClient {
             .flatMap { response, data -> Single<T> in
                 return Single<T>.create { single in
                     switch response.statusCode {
-                    case 200:
+                    case 200, 201:
                         do {
                             let processedData: T = try JSONDecoder().decode(T.self, from: data)
                             single(.success(processedData))
