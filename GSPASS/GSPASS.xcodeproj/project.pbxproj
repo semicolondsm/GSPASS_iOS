@@ -7,10 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9230A0E72670CFF1009FF4BB /* GSPassInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9230A0E62670CFF1009FF4BB /* GSPassInfoModel.swift */; };
+		9230A0E92670D9B3009FF4BB /* GSPassTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9230A0E82670D9B3009FF4BB /* GSPassTimeModel.swift */; };
+		9240D65C266E5383004F5546 /* BottomSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9240D65B266E5383004F5546 /* BottomSheetViewModel.swift */; };
+		9240D65E266F8234004F5546 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9240D65D266F8234004F5546 /* UIView.swift */; };
+		9240D6602670373D004F5546 /* passBtnViewer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9240D65F2670373D004F5546 /* passBtnViewer.xib */; };
+		9240D66226703D66004F5546 /* QRCodeViewer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9240D66126703D66004F5546 /* QRCodeViewer.xib */; };
+		9240D66426708D1E004F5546 /* PassBtnViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9240D66326708D1E004F5546 /* PassBtnViewer.swift */; };
+		9240D66626708D2C004F5546 /* QRCodeViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9240D66526708D2C004F5546 /* QRCodeViewer.swift */; };
 		925706992662537B0058B3D8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925706982662537B0058B3D8 /* LoginViewController.swift */; };
 		9257069B266253920058B3D8 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9257069A266253920058B3D8 /* Auth.storyboard */; };
 		9257069E266254B50058B3D8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9257069D266254B40058B3D8 /* LoginViewModel.swift */; };
 		925706A02662550A0058B3D8 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9257069F2662550A0058B3D8 /* TokenModel.swift */; };
+		92646ADA266CA05500AF486A /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92646AD9266CA05500AF486A /* UserInfoModel.swift */; };
 		92768529266459F300227DB5 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92768528266459F300227DB5 /* UITextField.swift */; };
 		9276852B2664850B00227DB5 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276852A2664850B00227DB5 /* ViewModelProtocol.swift */; };
 		9276853026675A8700227DB5 /* MealCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276852F26675A8700227DB5 /* MealCollectionViewCell.swift */; };
@@ -18,10 +27,13 @@
 		927685352667975A00227DB5 /* MealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927685342667975A00227DB5 /* MealModel.swift */; };
 		927685372667A9D900227DB5 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927685362667A9D900227DB5 /* Date.swift */; };
 		927685392668889B00227DB5 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927685382668889B00227DB5 /* Array.swift */; };
+		9276853B26690E3C00227DB5 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276853A26690E3C00227DB5 /* BottomSheetViewController.swift */; };
 		928D24C32656680600A9E343 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D24C22656680600A9E343 /* AppDelegate.swift */; };
 		928D24CA2656680600A9E343 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 928D24C82656680600A9E343 /* Main.storyboard */; };
 		928D24CC2656680700A9E343 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 928D24CB2656680700A9E343 /* Assets.xcassets */; };
 		928D24CF2656680700A9E343 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 928D24CD2656680700A9E343 /* LaunchScreen.storyboard */; };
+		928D7D8F2671FBF300B5D788 /* CIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D7D8E2671FBF300B5D788 /* CIImage.swift */; };
+		928D7D912671FC1600B5D788 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D7D902671FC1600B5D788 /* URL.swift */; };
 		92951AA9265B26B600F795E1 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 92951AA8265B26B600F795E1 /* .swiftlint.yml */; };
 		92951AD8265D10B300F795E1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92951AD7265D10B300F795E1 /* MainViewController.swift */; };
 		92951ADB265D10BD00F795E1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92951ADA265D10BD00F795E1 /* MainViewModel.swift */; };
@@ -35,10 +47,19 @@
 /* Begin PBXFileReference section */
 		15E8E2E1A7B781663C67ADF3 /* Pods-GSPASS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSPASS.release.xcconfig"; path = "Target Support Files/Pods-GSPASS/Pods-GSPASS.release.xcconfig"; sourceTree = "<group>"; };
 		63538831E6AC337B7650D414 /* Pods-GSPASS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSPASS.debug.xcconfig"; path = "Target Support Files/Pods-GSPASS/Pods-GSPASS.debug.xcconfig"; sourceTree = "<group>"; };
+		9230A0E62670CFF1009FF4BB /* GSPassInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSPassInfoModel.swift; sourceTree = "<group>"; };
+		9230A0E82670D9B3009FF4BB /* GSPassTimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSPassTimeModel.swift; sourceTree = "<group>"; };
+		9240D65B266E5383004F5546 /* BottomSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewModel.swift; sourceTree = "<group>"; };
+		9240D65D266F8234004F5546 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		9240D65F2670373D004F5546 /* passBtnViewer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = passBtnViewer.xib; sourceTree = "<group>"; };
+		9240D66126703D66004F5546 /* QRCodeViewer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRCodeViewer.xib; sourceTree = "<group>"; };
+		9240D66326708D1E004F5546 /* PassBtnViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassBtnViewer.swift; sourceTree = "<group>"; };
+		9240D66526708D2C004F5546 /* QRCodeViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewer.swift; sourceTree = "<group>"; };
 		925706982662537B0058B3D8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9257069A266253920058B3D8 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		9257069D266254B40058B3D8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		9257069F2662550A0058B3D8 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
+		92646AD9266CA05500AF486A /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
 		92768528266459F300227DB5 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		9276852A2664850B00227DB5 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		9276852F26675A8700227DB5 /* MealCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -46,12 +67,15 @@
 		927685342667975A00227DB5 /* MealModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealModel.swift; sourceTree = "<group>"; };
 		927685362667A9D900227DB5 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		927685382668889B00227DB5 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		9276853A26690E3C00227DB5 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		928D24BF2656680600A9E343 /* GSPASS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GSPASS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		928D24C22656680600A9E343 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		928D24C92656680600A9E343 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		928D24CB2656680700A9E343 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		928D24CE2656680700A9E343 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		928D24D02656680700A9E343 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		928D7D8E2671FBF300B5D788 /* CIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIImage.swift; sourceTree = "<group>"; };
+		928D7D902671FC1600B5D788 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
 		92951AA8265B26B600F795E1 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		92951AD7265D10B300F795E1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = GSPASS/View/VC/Main/MainViewController.swift; sourceTree = SOURCE_ROOT; };
 		92951ADA265D10BD00F795E1 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -113,6 +137,9 @@
 				92768528266459F300227DB5 /* UITextField.swift */,
 				927685362667A9D900227DB5 /* Date.swift */,
 				927685382668889B00227DB5 /* Array.swift */,
+				9240D65D266F8234004F5546 /* UIView.swift */,
+				928D7D8E2671FBF300B5D788 /* CIImage.swift */,
+				928D7D902671FC1600B5D788 /* URL.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -122,6 +149,9 @@
 			children = (
 				92951AD7265D10B300F795E1 /* MainViewController.swift */,
 				9276852F26675A8700227DB5 /* MealCollectionViewCell.swift */,
+				9276853A26690E3C00227DB5 /* BottomSheetViewController.swift */,
+				9240D66326708D1E004F5546 /* PassBtnViewer.swift */,
+				9240D66526708D2C004F5546 /* QRCodeViewer.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -130,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				92951ADA265D10BD00F795E1 /* MainViewModel.swift */,
+				9240D65B266E5383004F5546 /* BottomSheetViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -138,6 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				9276853126675AA800227DB5 /* MealCollectionViewCell.xib */,
+				9240D65F2670373D004F5546 /* passBtnViewer.xib */,
+				9240D66126703D66004F5546 /* QRCodeViewer.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -146,6 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				927685342667975A00227DB5 /* MealModel.swift */,
+				9230A0E62670CFF1009FF4BB /* GSPassInfoModel.swift */,
+				9230A0E82670D9B3009FF4BB /* GSPassTimeModel.swift */,
 			);
 			path = MainModel;
 			sourceTree = "<group>";
@@ -247,6 +282,7 @@
 			children = (
 				9257069F2662550A0058B3D8 /* TokenModel.swift */,
 				92B4EBA0265E1EEC001DF9C4 /* RegisterModel.swift */,
+				92646AD9266CA05500AF486A /* UserInfoModel.swift */,
 			);
 			path = AuthModel;
 			sourceTree = "<group>";
@@ -312,11 +348,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				92951AA9265B26B600F795E1 /* .swiftlint.yml in Resources */,
+				9240D66226703D66004F5546 /* QRCodeViewer.xib in Resources */,
 				9276853226675AA800227DB5 /* MealCollectionViewCell.xib in Resources */,
 				928D24CF2656680700A9E343 /* LaunchScreen.storyboard in Resources */,
 				9257069B266253920058B3D8 /* Auth.storyboard in Resources */,
 				928D24CC2656680700A9E343 /* Assets.xcassets in Resources */,
 				928D24CA2656680600A9E343 /* Main.storyboard in Resources */,
+				9240D6602670373D004F5546 /* passBtnViewer.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,18 +424,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9240D65E266F8234004F5546 /* UIView.swift in Sources */,
+				9230A0E72670CFF1009FF4BB /* GSPassInfoModel.swift in Sources */,
+				9240D65C266E5383004F5546 /* BottomSheetViewModel.swift in Sources */,
+				92646ADA266CA05500AF486A /* UserInfoModel.swift in Sources */,
 				927685352667975A00227DB5 /* MealModel.swift in Sources */,
+				928D7D912671FC1600B5D788 /* URL.swift in Sources */,
 				927685372667A9D900227DB5 /* Date.swift in Sources */,
 				927685392668889B00227DB5 /* Array.swift in Sources */,
 				92B4EB90265D41FA001DF9C4 /* GSPASSAPI.swift in Sources */,
+				9240D66426708D1E004F5546 /* PassBtnViewer.swift in Sources */,
 				925706A02662550A0058B3D8 /* TokenModel.swift in Sources */,
 				92951AD8265D10B300F795E1 /* MainViewController.swift in Sources */,
 				9257069E266254B50058B3D8 /* LoginViewModel.swift in Sources */,
+				9240D66626708D2C004F5546 /* QRCodeViewer.swift in Sources */,
+				9276853B26690E3C00227DB5 /* BottomSheetViewController.swift in Sources */,
 				9276852B2664850B00227DB5 /* ViewModelProtocol.swift in Sources */,
 				9276853026675A8700227DB5 /* MealCollectionViewCell.swift in Sources */,
 				92B4EBA4265E5195001DF9C4 /* StatusCode.swift in Sources */,
 				928D24C32656680600A9E343 /* AppDelegate.swift in Sources */,
 				92B4EBA1265E1EEC001DF9C4 /* RegisterModel.swift in Sources */,
+				9230A0E92670D9B3009FF4BB /* GSPassTimeModel.swift in Sources */,
+				928D7D8F2671FBF300B5D788 /* CIImage.swift in Sources */,
 				92951ADB265D10BD00F795E1 /* MainViewModel.swift in Sources */,
 				925706992662537B0058B3D8 /* LoginViewController.swift in Sources */,
 				92B4EB8C265D41CE001DF9C4 /* HTTPClient.swift in Sources */,

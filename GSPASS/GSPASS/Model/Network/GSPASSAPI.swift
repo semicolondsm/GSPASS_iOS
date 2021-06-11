@@ -10,15 +10,19 @@ import Alamofire
 import KeychainSwift
 
 enum GSPASSAPI {
-    // Authorization
+    // Auth
     case register(_ registerModel: RegisterModel)
     case login(_ userId: String, _ password: String)
     case tokenRefresh
     case password
     case overlap
+    case userInfo
 
     // Main
     case getMeal(_ dateIndex: Int)
+    case issuePass
+    case getNextPassTime
+    case getPassInfo
 }
 
 extension GSPASSAPI {
@@ -33,10 +37,14 @@ extension GSPASSAPI {
         case .register,
              .login,
              .password,
-             .tokenRefresh:
+             .tokenRefresh,
+             .issuePass:
             return .post
         case .overlap,
-             .getMeal:
+             .userInfo,
+             .getMeal,
+             .getNextPassTime,
+             .getPassInfo:
             return .get
         }
     }
@@ -48,7 +56,7 @@ extension GSPASSAPI {
                     "gcn": registerModel.gcn!,
                     "name": registerModel.name!,
                     "user_id": registerModel.user_id!,
-                    "registerModel.password": registerModel.password!]
+                    "password": registerModel.password!]
         case .login(let userId, let password):
             return ["id": userId,
                     "password": password]
@@ -75,7 +83,11 @@ extension GSPASSAPI {
             return nil
         case .tokenRefresh:
             return ["X-Refresh-Token": refreshToken]
-        case .getMeal:
+        case .getMeal,
+             .userInfo,
+             .issuePass,
+             .getNextPassTime,
+             .getPassInfo:
             return ["Authorization": "Bearer \(accessTocken)"]
         }
     }
@@ -92,8 +104,16 @@ extension GSPASSAPI {
             return "/password"
         case .overlap:
             return "/overlap"
+        case .userInfo:
+            return "/information"
         case .getMeal(let dateIndex):
             return "/meals?day=\(dateIndex)"
+        case .issuePass:
+            return "/"
+        case .getNextPassTime:
+            return "/gspass/time"
+        case .getPassInfo:
+            return "/gspass"
         }
     }
 

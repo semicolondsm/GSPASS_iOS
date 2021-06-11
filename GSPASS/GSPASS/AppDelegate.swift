@@ -20,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         HTTPClient.shared.networking(.tokenRefresh, TokenModel.self).subscribe(onSuccess: { token in
-            self.keychain.set(token.accessToken, forKey: "ACCESS-TOKEN")
-            self.keychain.set(token.refreshToken, forKey: "REFRESH-TOKEN")
+            self.keychain.set(token.access_token, forKey: "ACCESS-TOKEN")
+            self.keychain.set(token.refresh_token, forKey: "REFRESH-TOKEN")
             self.setRootViewController("Main", "MainNavigationController")
         }, onFailure: { _ in
             self.setRootViewController("Auth", "LoginViewController")

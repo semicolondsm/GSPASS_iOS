@@ -1,8 +1,10 @@
 PODS:
   - Alamofire (5.4.3)
   - CollectionViewPagingLayout (1.0.1)
+  - FloatingPanel (2.3.1)
   - KeychainSwift (19.0.0)
   - Loaf (0.7.0)
+  - NeuKit (0.0.4)
   - RxAlamofire (6.1.1):
     - RxAlamofire/Core (= 6.1.1)
   - RxAlamofire/Core (6.1.1):
@@ -19,8 +21,10 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - CollectionViewPagingLayout
+  - FloatingPanel
   - KeychainSwift (~> 19.0)
   - Loaf
+  - NeuKit
   - RxAlamofire
   - RxCocoa (= 6.2.0)
   - RxSwift (= 6.2.0)
@@ -30,8 +34,10 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - CollectionViewPagingLayout
+    - FloatingPanel
     - KeychainSwift
     - Loaf
+    - NeuKit
     - RxAlamofire
     - RxCocoa
     - RxRelay
@@ -41,14 +47,16 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   CollectionViewPagingLayout: 9c75b7edf3f2334f308c402622412960f67c18a4
+  FloatingPanel: fb9fd997f369e1f5f350d8bab41527c8d6fe2e0d
   KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
   Loaf: d69937cd00649f3fa260beb8b7aef0a1feb861ef
+  NeuKit: 4b0ee50ed38fcd9f424a29d30e43d4e32dabbb25
   RxAlamofire: beb75a1c452d0de225651db4903f5d29d034a620
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
 
-PODFILE CHECKSUM: 60a83213d60d752e86d56370b0f100131fe18ef1
+PODFILE CHECKSUM: 7e423591cd6ee65c600ff7a42e1c3acf91eaca86
 
 COCOAPODS: 1.10.1

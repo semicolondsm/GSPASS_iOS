@@ -14,5 +14,7 @@ target 'GSPASS' do
   pod 'KeychainSwift', '~> 19.0'
   pod 'Loaf'
   pod 'CollectionViewPagingLayout'
+  pod 'FloatingPanel'
+  pod 'NeuKit'
 
 end

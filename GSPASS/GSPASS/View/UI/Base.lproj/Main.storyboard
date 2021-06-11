@@ -65,6 +65,42 @@
             </objects>
             <point key="canvasLocation" x="-1002.4" y="-59.820089955022496"/>
         </scene>
+        <!--Bottom Sheet View Controller-->
+        <scene sceneID="3In-Lp-sNo">
+            <objects>
+                <viewController storyboardIdentifier="BottomSheetViewController" id="ibX-Jg-zYN" customClass="BottomSheetViewController" customModule="GSPASS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bot-Zh-rDD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="B0M-My-EUP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WYY-wZ-Wzv">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rDa-Qd-SKU"/>
+                        <constraints>
+                            <constraint firstItem="B0M-My-EUP" firstAttribute="top" secondItem="rDa-Qd-SKU" secondAttribute="top" id="ELo-QT-SRy"/>
+                            <constraint firstItem="B0M-My-EUP" firstAttribute="leading" secondItem="rDa-Qd-SKU" secondAttribute="leading" id="O8O-wl-OgS"/>
+                            <constraint firstItem="rDa-Qd-SKU" firstAttribute="bottom" secondItem="B0M-My-EUP" secondAttribute="bottom" id="QhW-sh-TiG"/>
+                            <constraint firstItem="rDa-Qd-SKU" firstAttribute="trailing" secondItem="B0M-My-EUP" secondAttribute="trailing" id="YC4-E9-gbS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageView" destination="B0M-My-EUP" id="UvE-ni-Wpo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LVc-sp-vTc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-191.19999999999999" y="-57.121439280359823"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
