@@ -16,7 +16,7 @@ class QRCodeViewer: UICollectionViewCell {
     @IBOutlet weak var waitingPersonCount: UILabel!
 
     private let disposeBag = DisposeBag()
-    
+
     private var timerObservable: Disposable?
 
     public func bind(_ gsPassInfo: PublishSubject<GSPassInfoModel>) {
@@ -27,11 +27,10 @@ class QRCodeViewer: UICollectionViewCell {
         })
         .disposed(by: disposeBag)
     }
-    
 
     private func generateQrCode() {
         let keychain = KeychainSwift()
-        let swiftLeeOrangeColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        let swiftLeeOrangeColor = #colorLiteral(red: 0.1176470588, green: 0.1176470588, blue: 0.1176470588, alpha: 1)
         let qrURLImage = URL(string: keychain.get("ACCESS-TOKEN") ?? "")?.qrImage(using: swiftLeeOrangeColor)
         self.qrCodeImageView.image = UIImage(ciImage: qrURLImage!)
     }

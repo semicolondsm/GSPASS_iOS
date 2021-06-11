@@ -30,8 +30,7 @@ extension CIImage {
     }
 
     /// Applies the given color as a tint color.
-    func tinted(using color: UIColor) -> CIImage?
-    {
+    func tinted(using color: UIColor) -> CIImage? {
         guard
             let transparentQRImage = transparent,
             let filter = CIFilter(name: "CIMultiplyCompositing"),
