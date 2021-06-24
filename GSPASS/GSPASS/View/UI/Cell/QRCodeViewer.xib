@@ -35,10 +35,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RHt-s8-lqY">
-                        <rect key="frame" x="20" y="60" width="335" height="310"/>
+                        <rect key="frame" x="20" y="60" width="335" height="370"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6F-Ut-d4l">
-                                <rect key="frame" x="0.0" y="250" width="335" height="60"/>
+                                <rect key="frame" x="0.0" y="310" width="335" height="60"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -49,15 +49,15 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tae-Fg-QZJ">
-                                <rect key="frame" x="62.5" y="8" width="210" height="210"/>
+                                <rect key="frame" x="32.5" y="8" width="270" height="270"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="210" id="L52-6B-fcu"/>
-                                    <constraint firstAttribute="height" constant="210" id="y5T-Qs-Sg5"/>
+                                    <constraint firstAttribute="width" constant="270" id="L52-6B-fcu"/>
+                                    <constraint firstAttribute="height" constant="270" id="y5T-Qs-Sg5"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나의 급식시간 까지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DS2-4g-z8C">
-                                <rect key="frame" x="104" y="233" width="127" height="21"/>
+                                <rect key="frame" x="104" y="293" width="127" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -65,7 +65,7 @@
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="x6F-Ut-d4l" secondAttribute="bottom" id="CSv-Va-qj2"/>
-                            <constraint firstAttribute="height" constant="310" id="YhH-Lc-XSX"/>
+                            <constraint firstAttribute="height" constant="370" id="YhH-Lc-XSX"/>
                             <constraint firstItem="x6F-Ut-d4l" firstAttribute="top" secondItem="DS2-4g-z8C" secondAttribute="bottom" constant="-4" id="ezY-Zq-y5h"/>
                             <constraint firstItem="x6F-Ut-d4l" firstAttribute="leading" secondItem="RHt-s8-lqY" secondAttribute="leading" id="gh7-Hr-xXX"/>
                             <constraint firstAttribute="trailing" secondItem="x6F-Ut-d4l" secondAttribute="trailing" id="hSV-cG-3EA"/>

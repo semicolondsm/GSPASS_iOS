@@ -17,9 +17,9 @@ class MealCollectionViewCell: UICollectionViewCell {
 
     public func bind(dateString: String, meal: MealModel) {
         dateStringLabel.text = dateString
-        breakfastMealLabel.text = meal.breakfast != nil ? meal.breakfast!.toString() : "급식이 없습니다."
-        lunchMealLabel.text = meal.lunch != nil ? meal.lunch!.toString() : "급식이 없습니다."
-        dinerMealLabel.text = meal.dinner != nil ? meal.dinner!.toString() : "급식이 없습니다."
+        breakfastMealLabel.text = meal.breakfast != nil ? meal.breakfast!.toString() : "급식이 없습니다 ㅜㅜㅜ"
+        lunchMealLabel.text = meal.lunch != nil ? meal.lunch!.toString() : "급식이 없습니다 ㅜㅜㅜ"
+        dinerMealLabel.text = meal.dinner != nil ? meal.dinner!.toString() : "급식이 없습니다 ㅜㅜㅜ"
     }
 }
 
